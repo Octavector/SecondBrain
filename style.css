@@ -1,0 +1,70 @@
+body{font-size:100%; margin:0; padding:0; background:#182043;}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+    color:white;
+    margin:0;
+    padding:0;
+    float:left;
+    margin: 0.15em 0 0 1em;
+}
+
+h2.noteTitle{
+    font-family: 'Roboto', sans-serif;
+    font-weight:900;
+    margin:0;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+    font-size:1em;
+}
+
+strong{
+ font-weight:900;   
+}
+
+header{
+    width:100%;
+    background:#ff5800;
+}
+
+header:after{
+     content:'';
+    display:table;
+    clear:both;
+}
+
+menu{
+    float:left;
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+    margin:0;
+    padding:0;
+}
+
+menu ul{list-style: none;}
+menu li{float:left}
+menu a{
+    display:block; 
+    padding:1em; 
+    background-color:#fa865b;
+    text-decoration: none;
+    color:white;
+}
+menu a:first-child{border-left:1px solid white;}
+
+#Container{
+ display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.note{
+ background:#abf;   
+    padding:1em;
+    flex-basis: 200px;
+}
