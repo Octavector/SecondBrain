@@ -13,11 +13,20 @@
 <h1>Second<strong>Brain</strong></h1>
         <menu>
             <ul>
-            <li><a href="#">Add</a></li>
+            <li><a href="#" id="sb_Add">Add</a></li>
             </ul>
         </menu>
     </header>
     
+    <div id="popupAdd" class="hidden">
+        <form action="" method="post">
+            <label for="addTitle">Name:</label>
+            <input id="addTitle" type="text" name="addtitle">
+            <label for="addNote">Note:</label>
+            <textarea id="addNote" name="addnote" rows="10" cols="50">Write something here</textarea>
+            <input type="submit" value="Add note">
+        </form>
+    </div>
     
     <div id="Container">
         
@@ -48,7 +57,7 @@
         
     </div>
     
-    
+    <script src="scripts.js"></script>
 </body>
 
 </html> 
