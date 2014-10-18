@@ -30,15 +30,36 @@ echo '<p>'.$noteBody.'</p>';
 
 
 #loop through tables
-$q = 'show tables';
+$q = 'SHOW TABLES';
 $r = mysqli_query($dbc,$q);
 
 if ($r){
     while($row = mysqli_fetch_array($r,MYSQLI_NUM)){
-        echo '<br>'.$row[0];
+        echo '<br>'.$row[0].'<br>';
     }
 }
 mysqli_free_result($r);
+
+
+
+
+#Add new note to the database
+$q = "INSERT INTO notes (date, title, note) VALUES(now(), '$noteTitle' , '$noteBody')";
+$r = mysqli_query($dbc,$q);
+
+if($r){
+    echo'success';  
+}
+else{
+    echo '<h2>'.mysqli_error($dbc).'</h2>';
+}
+
+#mysqli_free_result($r); 
+# WHEN I UNCOMMENT THE ABOVE, I RECEIVE THIS ERROR:
+# Warning: mysqli_free_result() expects parameter 1 to be mysqli_result
+
+
+#Close DB connection
 mysqli_close($dbc);
 
 
