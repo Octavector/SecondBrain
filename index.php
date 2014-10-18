@@ -19,7 +19,7 @@
     </header>
     
     <div id="popupAdd" class="hidden">
-        <form action="" method="post">
+        <form action="add_note.php" method="post">
             <label for="addTitle">Name:</label>
             <input id="addTitle" type="text" name="addtitle">
             <label for="addNote">Note:</label>
